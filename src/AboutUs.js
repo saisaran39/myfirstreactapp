@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function AboutUs(props)
+export function AboutUs(props)
 {
     const [name, setName] = useState('Sai');
     const testObj = [
@@ -25,11 +25,10 @@ function AboutUs(props)
     ]
     
     const handleClick = () => {
-        setName('Saran');
+        setName('Saran')
     }
 
     const updatedList = testObj.map((listItems)=>{
-        debugger
         return <li key={listItems.id}>{listItems.name}</li>;
     });
 

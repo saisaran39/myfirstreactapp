@@ -3,7 +3,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 class ContactUs extends React.Component {
-    debugger
     state = { username: "Nishanth", email: "" };
 
     onFormSubmit = (event) => {

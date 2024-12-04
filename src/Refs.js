@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 const Refs = ()=>{
-    debugger
      let demoRef = useRef(null);
      let inputRef = useRef(null);
     function change(){

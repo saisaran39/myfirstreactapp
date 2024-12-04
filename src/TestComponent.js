@@ -1,16 +1,13 @@
 import React from "react";
-
 import ReactDOM from "react-dom";
 
 class TestComponent extends React.Component {
-    debugger
     constructor(props) {
         super(props);
         this.state = { username: "Nishanth", email: "" };
     }
 
     componentDidMount() {
-        debugger
     }
 
     handleBtn = () => {
@@ -26,5 +23,13 @@ class TestComponent extends React.Component {
         );
     }
 }
+
+// TestComponent.propTypes = {
+//     name: PropTypes.string
+// }
+
+// TestComponent.defaultProps = {
+//     name: 'Testing'
+// }
 
 export default TestComponent;

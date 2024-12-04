@@ -1,17 +1,48 @@
 import logo from './logo.svg';
 import './App.css';
-import AboutUs from './AboutUs';
-import ContactUs from './ContactUs';
-import Refs from './Refs';
-import TestComponent from './TestComponent';
+import HomePage from './HomePage'
+import AboutUsPage from './AboutUsPage';
+import ContactUsPage from './ContactUsPage';
+// import Refs from './Refs';
+// import Test from './TestComp';
+// import TestComponent from './TestComponent';
+// import SnapShotComp from './SnapShotComp';
+// import ParentComp from './ParentComp';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import { useEffect } from 'react';
 
-function App() {
+function App(props) {
+  useEffect(() => {
+    console.log("Page called")
+  },[props])
   return (
     <>
-    <AboutUs />
-    <ContactUs />
-    <Refs/>
-    <TestComponent name="Moksha"/>
+    <Router>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">Contact</Link>
+                    </li>
+                </ul>
+            </nav>
+            {/*Implementing Routes for respective Path */}
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutUsPage />} />
+                <Route path="/contact" element={<ContactUsPage />} />
+            </Routes>
+        </Router>
     </>
   );
 }
